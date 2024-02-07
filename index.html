@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Since 2021, we've championed Web3's rise, fostering vibrant
+    communities and empowering builders through immersive events and
+    education. Join us as we unlock innovation, collaboration, and
+    your potential in this ever-evolving space. Let's thrive, together.">
+    <link rel="icon" href="favicon_io (1)/favicon-16x16.png" type="image/x-icon">
+
+    <!-- Optional: You can also provide alternative sizes for different devices -->
+    <!-- For example, 32x32 pixels -->
+    <link rel="icon" href="favicon_io (1)/favicon-32x32.png" sizes="32x32" type="image/png">
+    
+    <!-- For example, 16x16 pixels -->
+    <link rel="icon" href="favicon_io (1)/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <title>Web3Connect Global</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" 
+    />
+    <script charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+    
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loader pulsating-blob">
+        <div class="blob orange"></div>
+        <div class="blob white"></div>
+        <div class="blob purple"></div>
+    </div>
+
+    <div class="main" id="main-content">
+
+        <header>
+            <div class="navbar-wrapper">
+
+                <div class="navbar">
+                    <img src="./img/W3CG_logo.png" alt="W3CG logo" />
+
+                    <button type="button" class="hamburger" id="hamburger">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+    
+                    <button type="button" class="closeMenu" id="closeMenu">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+
+                    <nav class="nav-item">
+                        <div class="about-dropdown">
+                            <a href="#about-us">About Us</a>
+                            <a href="#achievements">Achievements</a>
+                            <!-- <a href="#">Link 3</a> -->
+                        </div>
+                        <div class="event-dropdown">
+                            <a href="#events">Past Events</a>
+                            <a href="#gallery">Gallery</a>
+                            <!-- <a href="#">Link 3</a> -->
+                        </div>
+                        <a href="#" class="about" id="about">About
+                            <i class="fa-solid fa-caret-down about-down" style="color: #fc6601"></i>
+                            <i class="fa-solid fa-caret-up about-up" style="color: #fc6601; display: none"></i>
+                        </a>
+                        <a href="#" class="event" id="event">Event
+                            <i class="fa-solid fa-caret-down event-down" style="color: #fc6601"></i>
+                            <i class="fa-solid fa-caret-up event-up" style="color: #fc6601; display: none"></i>
+                        </a>
+                    </nav>
+
+                    <div class="social-links">
+                        
+                        <a href="https://twitter.com/W3CG_Labs" target="_blank">
+                            <i class="fa-brands fa-x-twitter" style="color: #ffffff"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/w3cglabs/" target="_blank">
+                            <i class="fa-brands fa-linkedin-in" style="color: #ffffff"></i>
+                        </a>
+                        <a href="https://t.me/w3cglabs" target="_blank">
+                            <svg width="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.7106 3.65451C20.7106 3.65451 22.6531 2.89701 22.4906 4.73651C22.4371 5.49401 21.9516 8.14551 21.5736 11.013L20.2786 19.508C20.2786 19.508 20.1706 20.7525 19.1991 20.969C18.2281 21.185 16.7711 20.2115 16.5011 19.995C16.2851 19.8325 12.4541 17.3975 11.1051 16.2075C10.7271 15.8825 10.2951 15.2335 11.1591 14.476L16.8246 9.06501C17.4721 8.41601 18.1196 6.90101 15.4216 8.74051L7.86665 13.8805C7.86665 13.8805 7.00315 14.422 5.38465 13.935L1.87665 12.8525C1.87665 12.8525 0.581647 12.041 2.79415 11.2295C8.19065 8.68651 14.8281 6.08951 20.7096 3.65451H20.7106Z"
+                                        fill="currentcolor">
+                                    </path>
+                            </svg>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="side-navbar">
+    
+                    <div class="navMenu">
+    
+                        <div class="navMenu-links">
+                            <a href="/">Home</a>
+                            <a href="#about-us">About Us</a>
+                            <a href="#events">Events</a>
+                            <a href="#achievements">Achievements</a>
+                            <a href="#gallery">Gallery</a>
+                        </div>
+    
+                        <div class="navMenu-social-links">
+                            <a href="https://www.linkedin.com/company/w3cglabs/" target="_blank">
+                                <div>
+                                    <svg width="24" 
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_592_6105)">
+                                            <path
+                                                d="M6.9375 5.00002C6.93724 5.53046 6.72627 6.03906 6.35101 6.41394C5.97575 6.78883 5.46693 6.99929 4.9365 6.99902C4.40607 6.99876 3.89746 6.78779 3.52258 6.41253C3.14769 6.03727 2.93724 5.52846 2.9375 4.99802C2.93777 4.46759 3.14873 3.95899 3.52399 3.5841C3.89925 3.20922 4.40807 2.99876 4.9385 2.99902C5.46893 2.99929 5.97754 3.21026 6.35242 3.58552C6.72731 3.96078 6.93777 4.46959 6.9375 5.00002ZM6.9975 8.48002H2.9975V21H6.9975V8.48002ZM13.3175 8.48002H9.3375V21H13.2775V14.43C13.2775 10.77 18.0475 10.43 18.0475 14.43V21H21.9975V13.07C21.9975 6.90002 14.9375 7.13002 13.2775 10.16L13.3175 8.48002Z"
+                                                fill="currentcolor">
+                                            </path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_592_6105">
+                                                <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </a>
+    
+                            <a href="https://twitter.com/W3CG_Labs" target="_blank">
+                                <div>
+                                    <svg width="24" 
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_592_6095)">
+                                            <path
+                                                d="M22.1643 5.65593C21.4008 5.99362 20.5912 6.2154 19.7623 6.31393C20.636 5.79136 21.29 4.96894 21.6023 3.99993C20.7823 4.48793 19.8833 4.82993 18.9463 5.01493C18.3169 4.34151 17.4826 3.89489 16.5732 3.74451C15.6638 3.59413 14.7302 3.74842 13.9175 4.18338C13.1048 4.61834 12.4586 5.30961 12.0794 6.14972C11.7001 6.98983 11.609 7.93171 11.8202 8.82893C10.1574 8.74558 8.53058 8.31345 7.04554 7.56059C5.56049 6.80773 4.25038 5.75097 3.20025 4.45893C2.82854 5.09738 2.63321 5.82315 2.63425 6.56193C2.63425 8.01193 3.37225 9.29293 4.49425 10.0429C3.83026 10.022 3.18088 9.84271 2.60025 9.51993V9.57193C2.60045 10.5376 2.93462 11.4735 3.5461 12.221C4.15758 12.9684 5.00873 13.4814 5.95525 13.6729C5.33886 13.84 4.69256 13.8646 4.06525 13.7449C4.33212 14.5762 4.85226 15.3031 5.55284 15.824C6.25343 16.3449 7.09938 16.6337 7.97225 16.6499C7.10473 17.3313 6.11143 17.8349 5.04913 18.1321C3.98683 18.4293 2.87638 18.5142 1.78125 18.3819C3.69295 19.6114 5.91835 20.264 8.19125 20.2619C15.8842 20.2619 20.0913 13.8889 20.0913 8.36193C20.0913 8.18193 20.0863 7.99993 20.0783 7.82193C20.8971 7.23009 21.6038 6.49695 22.1653 5.65693L22.1643 5.65593Z"
+                                                fill="currentcolor">
+                                            </path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_592_6095">
+                                                <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </a>
+    
+                            <a href="https://t.me/w3cglabs" target="_blank">
+                                <div>
+                                    <svg width="24" 
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.7106 3.65451C20.7106 3.65451 22.6531 2.89701 22.4906 4.73651C22.4371 5.49401 21.9516 8.14551 21.5736 11.013L20.2786 19.508C20.2786 19.508 20.1706 20.7525 19.1991 20.969C18.2281 21.185 16.7711 20.2115 16.5011 19.995C16.2851 19.8325 12.4541 17.3975 11.1051 16.2075C10.7271 15.8825 10.2951 15.2335 11.1591 14.476L16.8246 9.06501C17.4721 8.41601 18.1196 6.90101 15.4216 8.74051L7.86665 13.8805C7.86665 13.8805 7.00315 14.422 5.38465 13.935L1.87665 12.8525C1.87665 12.8525 0.581647 12.041 2.79415 11.2295C8.19065 8.68651 14.8281 6.08951 20.7096 3.65451H20.7106Z"
+                                            fill="currentcolor"></path>
+                                    </svg>
+                                </div>
+                            </a>
+    
+                            <a href="https://chat.whatsapp.com/" target="_blank">
+                                <div>
+                                    <svg width="24" 
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.00401 22L3.35601 17.032C2.46515 15.5049 1.99711 13.768 2.00001 12C2.00001 6.477 6.47701 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C10.2328 22.0029 8.49667 21.5352 6.97001 20.645L2.00401 22ZM8.39101 7.308C8.26188 7.31602 8.13569 7.35003 8.02001 7.408C7.91153 7.46943 7.81251 7.54622 7.72601 7.636C7.60601 7.749 7.53801 7.847 7.46501 7.942C7.09542 8.423 6.89662 9.01342 6.90001 9.62C6.90201 10.11 7.03001 10.587 7.23001 11.033C7.63901 11.935 8.31201 12.89 9.20101 13.775C9.41501 13.988 9.62401 14.202 9.84901 14.401C10.9524 15.3725 12.2673 16.073 13.689 16.447L14.258 16.534C14.443 16.544 14.628 16.53 14.814 16.521C15.1053 16.506 15.3896 16.4271 15.647 16.29C15.778 16.2225 15.9058 16.1491 16.03 16.07C16.03 16.07 16.073 16.042 16.155 15.98C16.29 15.88 16.373 15.809 16.485 15.692C16.568 15.606 16.64 15.505 16.695 15.39C16.773 15.227 16.851 14.916 16.883 14.657C16.907 14.459 16.9 14.351 16.897 14.284C16.893 14.177 16.804 14.066 16.707 14.019L16.125 13.758C16.125 13.758 15.255 13.379 14.724 13.137C14.668 13.1126 14.608 13.0987 14.547 13.096C14.4786 13.089 14.4095 13.0967 14.3443 13.1186C14.2791 13.1405 14.2193 13.1761 14.169 13.223V13.221C14.164 13.221 14.097 13.278 13.374 14.154C13.3325 14.2098 13.2754 14.2519 13.2098 14.2751C13.1443 14.2982 13.0733 14.3013 13.006 14.284C12.9409 14.2666 12.877 14.2445 12.815 14.218C12.691 14.166 12.648 14.146 12.563 14.109L12.558 14.107C11.9859 13.8572 11.4562 13.5198 10.988 13.107C10.862 12.997 10.745 12.877 10.625 12.761C10.2316 12.3842 9.88873 11.958 9.60501 11.493L9.54601 11.398C9.50364 11.3342 9.46937 11.2653 9.44401 11.193C9.40601 11.046 9.50501 10.928 9.50501 10.928C9.50501 10.928 9.74801 10.662 9.86101 10.518C9.9551 10.3983 10.0429 10.2738 10.124 10.145C10.242 9.955 10.279 9.76 10.217 9.609C9.93701 8.925 9.64701 8.244 9.34901 7.568C9.29001 7.434 9.11501 7.338 8.95601 7.319C8.90201 7.313 8.84801 7.307 8.79401 7.303C8.65972 7.29633 8.52515 7.29866 8.39101 7.308Z"
+                                            fill="currentcolor"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-section flex">
+                <div class="cta-section flex flex-d-col">
+                    <div class="cta-text flex flex-d-col">
+                        <h1>Web3Connect Global</h1>
+                        <p class="tagline">
+                            Empowering Developers and Communities with
+                            <span class="highlight">Web3</span> Knowledge
+                            <span class="highlight">#BuildWeb3Verse</span>
+                        </p>
+                    </div>
+                    <div class="newsletter flex flex-d-col">
+                        <p>Subscribe to our newsletter</p>
+                        <div class="newsletter-wrapper">
+                            <form name="submit-to-google-sheet">
+                                <input name="Emails" type="email" placeholder="Enter your email address" required>
+                                <button type="submit">Submit</button><br>
+                                <span id="Success"></span>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="./img/globe.png" alt="Globe image" width="100%" />
+                </div>
+            </section>
+
+            <section class="trusted-by">
+                <div class="heading">
+                    <h3 class="underline">Trusted By</h3>
+                </div>
+                <div class="logos">
+                    <div class="logos-slide">
+                        <img src="./Assets/image 23.png" alt="" />
+                        <img src="./Assets/image 24.png" alt="" />
+                        <img src="./Assets/image 25.png" alt="" />
+                        <img src="./Assets/image 35.png" alt="" />
+                        <img src="./Assets/starknet_logo_-removebg-preview (1) 1.png" alt="" />
+                        <img src="./Assets/image 26.png" alt="" />
+                        <img src="./Assets/image 30.png" alt="" />
+                        <img src="./Assets/image 31.png" alt="" />
+                        <img src="./Assets/image 32.png" alt="" />
+                        <img src="./Assets/image 33.png" alt="" />
+                        <img src="./Assets/image 7.png" alt="" />
+                        <img src="./Assets/optimism-removebg-preview (1) 1.png" alt="" />
+                        <img src="./Assets/image 10.png" alt="" />
+                    </div>
+                    <div class="logos-slide">
+                        <img src="./Assets/image 23.png" alt="" />
+                        <img src="./Assets/image 24.png" alt="" />
+                        <img src="./Assets/image 25.png" alt="" />
+                        <img src="./Assets/image 35.png" alt="" />
+                        <img src="./Assets/starknet_logo_-removebg-preview (1) 1.png" alt="" />
+                        <img src="./Assets/image 26.png" alt="" />
+                        <img src="./Assets/image 30.png" alt="" />
+                        <img src="./Assets/image 31.png" alt="" />
+                        <img src="./Assets/image 32.png" alt="" />
+                        <img src="./Assets/image 33.png" alt="" />
+                        <img src="./Assets/image 7.png" alt="" />
+                        <img src="./Assets/optimism-removebg-preview (1) 1.png" alt="" />
+                        <img src="./Assets/image 10.png" alt="" />
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-us" id="about-us">
+                <div class="heading">
+                    <h3 class="underline">About Us</h3>
+                </div>
+                <p class="sub-heading">Welcome to Web3Connect Global</p>
+                <div class="info">
+                    <p>
+                        Since 2021, we've championed Web3's rise, fostering vibrant
+                        communities and empowering builders through immersive events and
+                        education. Join us as we unlock innovation, collaboration, and
+                        your potential in this ever-evolving space. Let's thrive, together.
+                    </p>
+                </div>
+            </section>
+
+            <section class="event-section" id="events">
+                <div class="heading">
+                    <h3 class="underline">Past Events</h3>
+                </div>
+                <div class="events">
+                    <div class="events-slide">
+                        <a href="http://lu.ma/quillcondubai"><img src="./Assets/eve12.png" alt="" /></a>
+                        <a href="https://lu.ma/capx-arcana-indore"><img src="./Assets/eve1.png" alt="" /></a>
+                        <a href="https://lu.ma/IndoreIn"><img src="./Assets/eve2.png" alt="" /></a>
+                        <a href="https://lu.ma/reef-web3-hackdays"><img src="./Assets/eve3.png" alt="" /></a>
+                        <a href="https://lu.ma/INDR_003"><img src="./Assets/eve4.png" alt="" /></a>
+                        <a href="https://lu.ma/sbmngkwj"><img src="./Assets/eev5.png" alt="" /></a>
+                        <a href="lu.ma/IITIndore"><img src="./Assets/eve6.png" alt="" /></a>
+                        <a href="https://lu.ma/DevBrunchMumbai"><img src="./Assets/eve7.png" alt="" /></a>
+                        <a href="https://lu.ma/DevBrunchIndore"><img src="./Assets/eve8.png" alt="" /></a>
+                        <a href="https://lu.ma/BNBEcosytemMixer"><img src="./Assets/eve9.png" alt="" /></a>
+                        <a href="https://lu.ma/flowpune"><img src="./Assets/eve10.png" alt="" /></a>
+                        <a href="https://lu.ma/Web3Bhopal"><img src="./Assets/eve11.png" alt="" /></a>
+                        <a href="https://lu.ma/OPHacks"><img src="./Assets/eve13.png" alt="" /></a>
+                    </div>
+
+                    <div class="events-slide">
+                        <a href="http://lu.ma/quillcondubai"><img src="./Assets/eve12.png" alt="" /></a>
+                        <a href="https://lu.ma/capx-arcana-indore"><img src="./Assets/eve1.png" alt="" /></a>
+                        <a href="https://lu.ma/IndoreIn"><img src="./Assets/eve2.png" alt="" /></a>
+                        <a href="https://lu.ma/reef-web3-hackdays"><img src="./Assets/eve3.png" alt="" /></a>
+                        <a href="https://lu.ma/INDR_003"><img src="./Assets/eve4.png" alt="" /></a>
+                        <a href="https://lu.ma/sbmngkwj"><img src="./Assets/eev5.png" alt="" /></a>
+                        <a href="lu.ma/IITIndore"><img src="./Assets/eve6.png" alt="" /></a>
+                        <a href="https://lu.ma/DevBrunchMumbai"><img src="./Assets/eve7.png" alt="" /></a>
+                        <a href="https://lu.ma/DevBrunchIndore"><img src="./Assets/eve8.png" alt="" /></a>
+                        <a href="https://lu.ma/BNBEcosytemMixer"><img src="./Assets/eve9.png" alt="" /></a>
+                        <a href="https://lu.ma/flowpune"><img src="./Assets/eve10.png" alt="" /></a>
+                        <a href="https://lu.ma/Web3Bhopal"><img src="./Assets/eve11.png" alt="" /></a>
+                        <a href="https://lu.ma/OPHacks"><img src="./Assets/eve11.png" alt="" /></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="highlights" id="achievements">
+                <div class="heading high-head">
+                    <h3 class="underline">Highlights & Breakthroughs</h3>
+                </div>
+                <div class="grid-container">
+                    <div class="grid-item item1">
+                        <p class="num1">125+</p>
+                        <p>Meetups</p>
+                    </div>
+                    <div class="grid-item item2">
+                        <p class="num2">32</p>
+                        <p>Cities</p>
+                    </div>
+                    <div class="grid-item item3">
+                        <p class="num2">16,000+</p>
+                        <p>Members</p>
+                    </div>
+                    <div class="grid-item item4">
+                        <p class="num2">1.5M+</p>
+                        <p>Impressions</p>
+                    </div>
+                    <div class="grid-item item5">
+                        <p class="num2">11k</p>
+                        <p>Students Trained</p>
+                    </div>
+                    <div class="grid-item item5">
+                        <p class="num2">50+</p>
+                        <p>Ecosystem Patners</p>
+                    </div>
+                    <div class="grid-item item5">
+                        <p class="num2">56</p>
+                        <p>Colleges</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-wrapper" id="gallery">
+                <div class="gallery">
+                    <div class="gallery-header flex flex-d-col">
+                        <div class="gallery-text flex flex-d-col">
+                            <h3>Moments captured</h3>
+                            <a href="https://drive.google.com/drive/folders/1SqOSUyx3V58rKqsyPC2-Txne3NFwFFKI" target="_blank" class="gallery-link">
+                                <p class="highlight">
+                                    <!-- A look back at
+                                    our events -->
+                                    See more
+                                    <i class="fa-regular fa-hand-point-right"></i>
+                                </p>
+                            </a>
+
+                        </div>
+                        <div class="scroll-btn flex">
+                            <button type="button" id="scroll-left">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button type="button" id="scroll-right">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="photos">
+                        <div class="photos-slide">
+                            <img src="./Assets/1670498000553.jpeg" alt="" />
+                            <img src="./Assets/1678172322991.jpeg" alt="" />
+                            <img src="./Assets/1681886148305.jpeg" alt="" />
+                            <img src="./Assets/1683791759626.jpeg" alt="" />
+                            <img src="./Assets/1687417204301.jpeg" alt="" />
+                            <img src="./Assets/1689058443070.jpeg" alt="" />
+                            <img src="./Assets/1681740963520.jpeg" alt="" />
+                            <img src="./Assets/1695730049616.jpeg" alt="" />
+                            <img src="./Assets/1670498001820.jpeg" alt="" />
+                            <img src="./Assets/1677334762580.jpeg" alt="" />
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="twitter-gallery">
+                <div class="heading-twitter">
+                    <h3 class="underline">See What People Are Saying</h3>
+                </div>
+                <div class="twitter-wall">
+                    <div class="twitter-posts">
+                        
+                            <div class="twitter-posts-col posts-col-1">
+                            <div class="tw post-1 span 1">
+                                <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark">
+                                    <p lang="en" dir="ltr">
+                                        An electrifying last week for
+                                        <a href="https://twitter.com/MoveBuilders?ref_src=twsrc%5Etfw">@MoveBuilders</a>
+                                        &amp;
+                                        <a href="https://twitter.com/Aptos_Network?ref_src=twsrc%5Etfw">@Aptos_Network</a>
+                                        at “Indore Blockchain Days” ! 🤩🔥<br /><br />📣 Let the
+                                        numbers speak for themselves 👀<br /><br />✅ 4 colleges<br />✅
+                                        1000+ registrations<br />✅ 600+ attendees <br />✅ 100+
+                                        wallet installs<br /><br />Check out the banger teaser &amp;
+                                        relive the joy👇🍿
+                                        <a href="https://t.co/LQAE2aRKRg">pic.twitter.com/LQAE2aRKRg</a>
+                                    </p>
+                                    &mdash; Move Developers DAO (MDD) (@MoveBuilders)
+                                    <a
+                                        href="https://twitter.com/MoveBuilders/status/1704908169582129378?ref_src=twsrc%5Etfw">September
+                                        21, 2023</a>
+                                </blockquote>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-2">
+                                <blockquote class="twitter-tweet" data-lang="en" data-theme="dark">
+                                    <p lang="en" dir="ltr">
+                                        An electrifying last week for
+                                        <a href="https://twitter.com/MoveBuilders?ref_src=twsrc%5Etfw">@MoveBuilders</a>
+                                        &amp;
+                                        <a href="https://twitter.com/Aptos_Network?ref_src=twsrc%5Etfw">@Aptos_Network</a>
+                                        at “Indore Blockchain Days” ! 🤩🔥<br /><br />📣 Let the
+                                        numbers speak for themselves 👀<br /><br />✅ 4 colleges<br />✅
+                                        1000+ registrations<br />✅ 600+ attendees <br />✅ 100+
+                                        wallet installs<br /><br />Check out the banger teaser &amp;
+                                        relive the joy👇🍿
+                                        <a href="https://t.co/LQAE2aRKRg">pic.twitter.com/LQAE2aRKRg</a>
+                                    </p>
+                                    &mdash; Move Developers DAO (MDD) (@MoveBuilders)
+                                    <a
+                                        href="https://twitter.com/MoveBuilders/status/1704908169582129378?ref_src=twsrc%5Etfw">September
+                                        21, 2023</a>
+                                </blockquote>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-5">
+                                <blockquote class="twitter-tweet" data-theme="dark">
+                                    <p lang="en" dir="ltr">
+                                        028 - Indore, MP<br /><br />Wow, the Indore event was
+                                        absolutely amazing! 🚀Indore did
+                                        <a
+                                            href="https://twitter.com/hashtag/SendIT?src=hash&amp;ref_src=twsrc%5Etfw">#SendIT</a>
+                                        out of the world<br /><br />Our 11th stop on the
+                                        <a href="https://twitter.com/ArcanaNetwork?ref_src=twsrc%5Etfw">@ArcanaNetwork</a>
+                                        Just SendIt World Tour 🗺️<br /><br />Hosted by the
+                                        incredible
+                                        <a href="https://twitter.com/MohitX_?ref_src=twsrc%5Etfw">@MohitX_</a>
+                                        our Capx Club Scout member representing Indore! Here’s what
+                                        he had to say 💚<br /><br />“…
+                                        <a href="https://t.co/FCWJJGg0bO">pic.twitter.com/FCWJJGg0bO</a>
+                                    </p>
+                                    &mdash; Capx Club (@CapxClub)
+                                    <a href="https://twitter.com/CapxClub/status/1717781421056500031?ref_src=twsrc%5Etfw">October
+                                        27, 2023</a>
+                                </blockquote>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-3 span 2">
+                                <blockquote class="twitter-tweet" data-lang="en" data-theme="dark">
+                                    <p lang="en" dir="ltr">
+                                        We’re pleased to have @Web3CGlobal as an Ecosystem Partner
+                                        for
+                                        <a
+                                            href="https://twitter.com/hashtag/Unfold23?src=hash&amp;ref_src=twsrc%5Etfw">#Unfold23</a>,
+                                        India’s Premier
+                                        <a
+                                            href="https://twitter.com/hashtag/Web3?src=hash&amp;ref_src=twsrc%5Etfw">#Web3</a>
+                                        Event!<br /><br />Buy your tickets now -
+                                        <a href="https://t.co/xN4E9Jfaz5">https://t.co/xN4E9Jfaz5</a>
+                                        <a href="https://t.co/QxxX0VyK9K">pic.twitter.com/QxxX0VyK9K</a>
+                                    </p>
+                                    &mdash; CoinDCX: Made in India, for the World (@CoinDCX)
+                                    <a href="https://twitter.com/CoinDCX/status/1704140789717111210?ref_src=twsrc%5Etfw">September
+                                        19, 2023</a>
+                                </blockquote>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-4">
+                                <blockquote class="twitter-tweet" data-theme="dark">
+                                    <p lang="en" dir="ltr">
+                                        Join us at Central India&#39;s Biggest Web3 Community Meetup
+                                        in Bhopal 🎉<br /><br />Learn about Blockchain, Web3,
+                                        Metaverse, NFTs with the industry experts and dive deep into
+                                        the future of technologies 🚀<a
+                                            href="https://twitter.com/The_NewsCrypto?ref_src=twsrc%5Etfw">@The_NewsCrypto</a>
+                                        <a
+                                            href="https://twitter.com/jaskaranmanocha?ref_src=twsrc%5Etfw">@jaskaranmanocha</a>
+                                        <a href="https://twitter.com/MohitX_?ref_src=twsrc%5Etfw">@MohitX_</a>
+                                        @LNCTUniversity
+                                        <a href="https://t.co/sFxuUWQkTV">pic.twitter.com/sFxuUWQkTV</a>
+                                    </p>
+                                    &mdash; W3CG Labs (@W3CG_Labs)
+                                    <a href="https://twitter.com/W3CG_Labs/status/1692268040631771175?ref_src=twsrc%5Etfw">August
+                                        17, 2023</a>
+                                </blockquote>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                    
+                            </div>
+                            <div class="twitter-posts-col posts-col-2">
+                            <div class="tw post-1 span 1">
+                                <blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">First ever <a href="https://twitter.com/shardeum?ref_src=twsrc%5Etfw">@shardeum</a> <a href="https://twitter.com/hashtag/Proofofcommunity?src=hash&amp;ref_src=twsrc%5Etfw">#Proofofcommunity</a> at Ujjain 🎉🎉<br><br>Recently, I got a chance to organise and speak at <a href="https://twitter.com/shardeum?ref_src=twsrc%5Etfw">@shardeum</a> <a href="https://twitter.com/hashtag/proofofcommunity?src=hash&amp;ref_src=twsrc%5Etfw">#proofofcommunity</a> at Ujjain. <br><br>Looking forward to spread the words about <a href="https://twitter.com/shardeum?ref_src=twsrc%5Etfw">@shardeum</a> in more cities in upcoming days with <a href="https://twitter.com/NischalShetty?ref_src=twsrc%5Etfw">@NischalShetty</a> <a href="https://twitter.com/gregoryhemmer?ref_src=twsrc%5Etfw">@gregoryhemmer</a> <a href="https://twitter.com/LoveneeshDhir?ref_src=twsrc%5Etfw">@LoveneeshDhir</a>. <a href="https://t.co/EsKbR2QAmc">pic.twitter.com/EsKbR2QAmc</a></p>&mdash; Mohit Jain (@MohitX_) <a href="https://twitter.com/MohitX_/status/1682098167486226439?ref_src=twsrc%5Etfw">July 20, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-3 span 2">
+                                <blockquote class="twitter-tweet" data-lang="en" data-theme="dark">
+                                    <p lang="en" dir="ltr">
+                                        We’re pleased to have @Web3CGlobal as an Ecosystem Partner
+                                        for
+                                        <a
+                                            href="https://twitter.com/hashtag/Unfold23?src=hash&amp;ref_src=twsrc%5Etfw">#Unfold23</a>,
+                                        India’s Premier
+                                        <a
+                                            href="https://twitter.com/hashtag/Web3?src=hash&amp;ref_src=twsrc%5Etfw">#Web3</a>
+                                        Event!<br /><br />Buy your tickets now -
+                                        <a href="https://t.co/xN4E9Jfaz5">https://t.co/xN4E9Jfaz5</a>
+                                        <a href="https://t.co/QxxX0VyK9K">pic.twitter.com/QxxX0VyK9K</a>
+                                    </p>
+                                    &mdash; CoinDCX: Made in India, for the World (@CoinDCX)
+                                    <a href="https://twitter.com/CoinDCX/status/1704140789717111210?ref_src=twsrc%5Etfw">September
+                                        19, 2023</a>
+                                </blockquote>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-2">
+                                <blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">This is fantastic to see! 👏<br><br>Clearly, Education to build and innovate in Web3 is not just limited to big cities but also penetrating deeper at the ground level in cities like Bhppal, Indore and many more. <br><br>Keep up the great work! Kudos to our community local chapters leaders!… <a href="https://t.co/gCJiQt3DxH">https://t.co/gCJiQt3DxH</a></p>&mdash; Sumit Gupta (CoinDCX) (@smtgpt) <a href="https://twitter.com/smtgpt/status/1693182327214714888?ref_src=twsrc%5Etfw">August 20, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-5">
+                                <blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">Our team is here at Web3 Conf 🎉<br><br>Comment below to meet us and get hands on some cool merch 😎🎁<a href="https://twitter.com/hashtag/Web3Conf?src=hash&amp;ref_src=twsrc%5Etfw">#Web3Conf</a> <a href="https://twitter.com/web3conf_india?ref_src=twsrc%5Etfw">@web3conf_india</a> <a href="https://t.co/1xOzNNi35W">pic.twitter.com/1xOzNNi35W</a></p>&mdash; W3CG Labs📍OPHacks - IIT Bombay (@W3CG_Labs) <a href="https://twitter.com/W3CG_Labs/status/1690247525922705408?ref_src=twsrc%5Etfw">August 12, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-4">
+                                <blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">Just attended an eye-opening <a href="https://twitter.com/hashtag/web3?src=hash&amp;ref_src=twsrc%5Etfw">#web3</a> webinar and my mind is buzzing with possibilities! From decentralized finance to digital identity, the future of the internet is looking brighter than ever. Grateful for the knowledge gained and excited to be part of the decentralized revolution <a href="https://t.co/woo4QJ40hF">pic.twitter.com/woo4QJ40hF</a></p>&mdash; Khushi Maheshwari (@KhushiM04931451) <a href="https://twitter.com/KhushiM04931451/status/1701993026829393988?ref_src=twsrc%5Etfw">September 13, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            </div>
+                            <div class="twitter-posts-col posts-col-3">
+                            
+                            <div class="tw post-3 span 2">
+                                <blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">A really amazing day at <a href="https://twitter.com/shardeum?ref_src=twsrc%5Etfw">@shardeum</a> meet-up event by <a href="https://twitter.com/MohitX_?ref_src=twsrc%5Etfw">@MohitX_</a> &amp; <a href="https://twitter.com/FoundershipHQ?ref_src=twsrc%5Etfw">@FoundershipHQ</a> organizer <a href="https://twitter.com/LakshDilliwal?ref_src=twsrc%5Etfw">@LakshDilliwal</a> with MGI team...enjoyed the talks by Mohit and <a href="https://twitter.com/versatile_amit?ref_src=twsrc%5Etfw">@versatile_amit</a> (GOAT)🔥<br><br>Can&#39;t wait for more such events<a href="https://twitter.com/hashtag/powerofcommunity?src=hash&amp;ref_src=twsrc%5Etfw">#powerofcommunity</a> <a href="https://twitter.com/hashtag/Web3?src=hash&amp;ref_src=twsrc%5Etfw">#Web3</a> <a href="https://t.co/bDJdDU78sm">pic.twitter.com/bDJdDU78sm</a></p>&mdash; Ronit 🗿 (@R0nitGurjar) <a href="https://twitter.com/R0nitGurjar/status/1680547600137633792?ref_src=twsrc%5Etfw">July 16, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-5">
+                                <blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">Had an amazing session and workshop on <a href="https://twitter.com/hashtag/blockchain?src=hash&amp;ref_src=twsrc%5Etfw">#blockchain</a> <a href="https://twitter.com/hashtag/smartcontract?src=hash&amp;ref_src=twsrc%5Etfw">#smartcontract</a> hosted by <a href="https://twitter.com/shardeum?ref_src=twsrc%5Etfw">@shardeum</a> <a href="https://twitter.com/chirag?ref_src=twsrc%5Etfw">@chirag</a> <br><br>Learned so many amazing insights on Web3 and Blockchain and smart contract and deployed it. <a href="https://twitter.com/okx?ref_src=twsrc%5Etfw">@okx</a> <a href="https://twitter.com/gdsc_cdgi?ref_src=twsrc%5Etfw">@gdsc_cdgi</a> <a href="https://twitter.com/MohitX_?ref_src=twsrc%5Etfw">@MohitX_</a> <a href="https://twitter.com/AryanChachra?ref_src=twsrc%5Etfw">@AryanChachra</a> <a href="https://twitter.com/HardikPanwar_12?ref_src=twsrc%5Etfw">@HardikPanwar_12</a> <a href="https://twitter.com/RaunekV30?ref_src=twsrc%5Etfw">@RaunekV30</a> <a href="https://twitter.com/hashtag/ProofOfCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#ProofOfCommunity</a> <a href="https://twitter.com/hashtag/Web3?src=hash&amp;ref_src=twsrc%5Etfw">#Web3</a> <a href="https://t.co/BvFvulWtdB">pic.twitter.com/BvFvulWtdB</a></p>&mdash; Simran Bhalode (@SBhalode) <a href="https://twitter.com/SBhalode/status/1704878461486239872?ref_src=twsrc%5Etfw">September 21, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-4">
+                                <blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">Relive the glitz and glamour of our <a href="https://twitter.com/hashtag/Astonishing?src=hash&amp;ref_src=twsrc%5Etfw">#Astonishing</a> offline event in Indore! 📸🎊🔥<br><br>We had a day full of 💡knowledge sharing, 🗣captivating conversations and 🤩fun! Take a visual journey through the 🚀extraordinary moments that made this event truly🎉unforgettable!<a href="https://twitter.com/hashtag/BitMartindia?src=hash&amp;ref_src=twsrc%5Etfw">#BitMartindia</a> <a href="https://t.co/c12UU5pRql">pic.twitter.com/c12UU5pRql</a></p>&mdash; BitMart India (@BitMart_India) <a href="https://twitter.com/BitMart_India/status/1678364375814635525?ref_src=twsrc%5Etfw">July 10, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-1 span 1">
+                                <blockquote class="twitter-tweet" data-conversation="none" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">quite literally<br>they&#39;ve been conducting meetups in places we&#39;ve never heard of – good sign that they care about adoption &amp; development from ground up.</p>&mdash; Web3 Meetups @ Web3Meetups.xyz (@web3meetups) <a href="https://twitter.com/web3meetups/status/1661446253778173953?ref_src=twsrc%5Etfw">May 24, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            <div class="tw post-2">
+                                <blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">We have the <a href="https://twitter.com/5ireChain?ref_src=twsrc%5Etfw">@5ireChain</a> team giving a workshop on Intro About 5ireChain &amp; Smart Contract Deployment 👾<a href="https://twitter.com/hashtag/HTFIndore?src=hash&amp;ref_src=twsrc%5Etfw">#HTFIndore</a> <a href="https://twitter.com/hashtag/HackThisFall?src=hash&amp;ref_src=twsrc%5Etfw">#HackThisFall</a> <a href="https://twitter.com/hashtag/HTFMeetups?src=hash&amp;ref_src=twsrc%5Etfw">#HTFMeetups</a> ✨ <a href="https://t.co/C9f7SXv3Li">pic.twitter.com/C9f7SXv3Li</a></p>&mdash; Hack This Fall 2024 🔜 (@hackthisfall) <a href="https://twitter.com/hackthisfall/status/1665295897713057792?ref_src=twsrc%5Etfw">June 4, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            </div>
+                            </div>
+                            
+                            
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="footer-logo-module">
+                        <a href="/" aria-current="page" class="footer_logo-wrapper w-inline-block w--current">
+                            <img src="./img/W3CG_logo.png" loading="lazy" alt="">
+                        </a>
+                        <div class="footer-desc">
+                            <div>
+                                We Are Local!<br>
+                                We Are Global!
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="footer-info-module">
+                        <div class="footer-title-wrapper">
+                            <div>Company</div>
+                        </div>
+                        <div class="footer-nav-links">
+                            <!-- <a href="./index.html">Home</a> -->
+                            <a href="/">Home</a>
+                            <a href="https://web3connectglobal.notion.site/b62f4070d8244daea9217973ff35139d?v=8781028dcbf14491b7a6936ea0086cd0" target="_blank">Our Events</a>
+                            <a href="https://linktr.ee/W3CG" target="_blank">Linktree</a>
+                            <a href="mailto:Web3connectglobal@gmail.com">Get in touch</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-module">
+                        <div class="footer-title-wrapper">
+                            <div>Contact</div>
+                        </div>
+                        <div class="footer-contact-content-wrapper">
+                            <div class="footer-contact-email-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.4012 5.33886C20.3217 5.33106 20.2415 5.33106 20.162 5.33886H3.8287C3.72402 5.34039 3.62003 5.35534 3.51953 5.38328L11.9487 13.3742L20.4012 5.33886Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M21.2646 6.1106L12.7713 14.1626C12.5527 14.3695 12.257 14.4856 11.9488 14.4856C11.6406 14.4856 11.3449 14.3695 11.1263 14.1626L2.7088 6.17168C2.68293 6.26222 2.6692 6.35551 2.66797 6.44934V17.5556C2.66797 17.8501 2.79089 18.1326 3.00968 18.3409C3.22847 18.5492 3.52522 18.6662 3.83464 18.6662H20.168C20.4774 18.6662 20.7741 18.5492 20.9929 18.3409C21.2117 18.1326 21.3346 17.8501 21.3346 17.5556V6.44934C21.33 6.33364 21.3064 6.21935 21.2646 6.1106ZM4.6338 17.5556H3.82297V16.7615L8.0638 12.7577L8.8863 13.5407L4.6338 17.5556ZM20.1563 17.5556H19.3396L15.0871 13.5407L15.9096 12.7577L20.1505 16.7615L20.1563 17.5556Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+                            <div class="footer-contact-email">
+                                <div>Web3connectglobal@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="footer-contact-content-wrapper">
+                            <div class="footer-social-links">
+                                <a href="https://www.linkedin.com/company/w3cglabs/" target="_blank">
+                                    <div>
+                                        <svg width="24" 
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_592_6105)">
+                                                <path
+                                                    d="M6.9375 5.00002C6.93724 5.53046 6.72627 6.03906 6.35101 6.41394C5.97575 6.78883 5.46693 6.99929 4.9365 6.99902C4.40607 6.99876 3.89746 6.78779 3.52258 6.41253C3.14769 6.03727 2.93724 5.52846 2.9375 4.99802C2.93777 4.46759 3.14873 3.95899 3.52399 3.5841C3.89925 3.20922 4.40807 2.99876 4.9385 2.99902C5.46893 2.99929 5.97754 3.21026 6.35242 3.58552C6.72731 3.96078 6.93777 4.46959 6.9375 5.00002ZM6.9975 8.48002H2.9975V21H6.9975V8.48002ZM13.3175 8.48002H9.3375V21H13.2775V14.43C13.2775 10.77 18.0475 10.43 18.0475 14.43V21H21.9975V13.07C21.9975 6.90002 14.9375 7.13002 13.2775 10.16L13.3175 8.48002Z"
+                                                    fill="currentcolor"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_592_6105">
+                                                    <rect width="24" height="24" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <a href="https://twitter.com/W3CG_Labs" target="_blank">
+                                    <div>
+                                        <svg width="24" 
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_592_6095)">
+                                                <path
+                                                    d="M22.1643 5.65593C21.4008 5.99362 20.5912 6.2154 19.7623 6.31393C20.636 5.79136 21.29 4.96894 21.6023 3.99993C20.7823 4.48793 19.8833 4.82993 18.9463 5.01493C18.3169 4.34151 17.4826 3.89489 16.5732 3.74451C15.6638 3.59413 14.7302 3.74842 13.9175 4.18338C13.1048 4.61834 12.4586 5.30961 12.0794 6.14972C11.7001 6.98983 11.609 7.93171 11.8202 8.82893C10.1574 8.74558 8.53058 8.31345 7.04554 7.56059C5.56049 6.80773 4.25038 5.75097 3.20025 4.45893C2.82854 5.09738 2.63321 5.82315 2.63425 6.56193C2.63425 8.01193 3.37225 9.29293 4.49425 10.0429C3.83026 10.022 3.18088 9.84271 2.60025 9.51993V9.57193C2.60045 10.5376 2.93462 11.4735 3.5461 12.221C4.15758 12.9684 5.00873 13.4814 5.95525 13.6729C5.33886 13.84 4.69256 13.8646 4.06525 13.7449C4.33212 14.5762 4.85226 15.3031 5.55284 15.824C6.25343 16.3449 7.09938 16.6337 7.97225 16.6499C7.10473 17.3313 6.11143 17.8349 5.04913 18.1321C3.98683 18.4293 2.87638 18.5142 1.78125 18.3819C3.69295 19.6114 5.91835 20.264 8.19125 20.2619C15.8842 20.2619 20.0913 13.8889 20.0913 8.36193C20.0913 8.18193 20.0863 7.99993 20.0783 7.82193C20.8971 7.23009 21.6038 6.49695 22.1653 5.65693L22.1643 5.65593Z"
+                                                    fill="currentcolor"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_592_6095">
+                                                    <rect width="24" height="24" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <a href="https://t.me/w3cglabs" target="_blank">
+                                    <div>
+                                        <svg width="24" 
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20.7106 3.65451C20.7106 3.65451 22.6531 2.89701 22.4906 4.73651C22.4371 5.49401 21.9516 8.14551 21.5736 11.013L20.2786 19.508C20.2786 19.508 20.1706 20.7525 19.1991 20.969C18.2281 21.185 16.7711 20.2115 16.5011 19.995C16.2851 19.8325 12.4541 17.3975 11.1051 16.2075C10.7271 15.8825 10.2951 15.2335 11.1591 14.476L16.8246 9.06501C17.4721 8.41601 18.1196 6.90101 15.4216 8.74051L7.86665 13.8805C7.86665 13.8805 7.00315 14.422 5.38465 13.935L1.87665 12.8525C1.87665 12.8525 0.581647 12.041 2.79415 11.2295C8.19065 8.68651 14.8281 6.08951 20.7096 3.65451H20.7106Z"
+                                                fill="currentcolor"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <a href="https://chat.whatsapp.com/" target="_blank">
+                                    <div>
+                                        <svg width="24" 
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.00401 22L3.35601 17.032C2.46515 15.5049 1.99711 13.768 2.00001 12C2.00001 6.477 6.47701 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C10.2328 22.0029 8.49667 21.5352 6.97001 20.645L2.00401 22ZM8.39101 7.308C8.26188 7.31602 8.13569 7.35003 8.02001 7.408C7.91153 7.46943 7.81251 7.54622 7.72601 7.636C7.60601 7.749 7.53801 7.847 7.46501 7.942C7.09542 8.423 6.89662 9.01342 6.90001 9.62C6.90201 10.11 7.03001 10.587 7.23001 11.033C7.63901 11.935 8.31201 12.89 9.20101 13.775C9.41501 13.988 9.62401 14.202 9.84901 14.401C10.9524 15.3725 12.2673 16.073 13.689 16.447L14.258 16.534C14.443 16.544 14.628 16.53 14.814 16.521C15.1053 16.506 15.3896 16.4271 15.647 16.29C15.778 16.2225 15.9058 16.1491 16.03 16.07C16.03 16.07 16.073 16.042 16.155 15.98C16.29 15.88 16.373 15.809 16.485 15.692C16.568 15.606 16.64 15.505 16.695 15.39C16.773 15.227 16.851 14.916 16.883 14.657C16.907 14.459 16.9 14.351 16.897 14.284C16.893 14.177 16.804 14.066 16.707 14.019L16.125 13.758C16.125 13.758 15.255 13.379 14.724 13.137C14.668 13.1126 14.608 13.0987 14.547 13.096C14.4786 13.089 14.4095 13.0967 14.3443 13.1186C14.2791 13.1405 14.2193 13.1761 14.169 13.223V13.221C14.164 13.221 14.097 13.278 13.374 14.154C13.3325 14.2098 13.2754 14.2519 13.2098 14.2751C13.1443 14.2982 13.0733 14.3013 13.006 14.284C12.9409 14.2666 12.877 14.2445 12.815 14.218C12.691 14.166 12.648 14.146 12.563 14.109L12.558 14.107C11.9859 13.8572 11.4562 13.5198 10.988 13.107C10.862 12.997 10.745 12.877 10.625 12.761C10.2316 12.3842 9.88873 11.958 9.60501 11.493L9.54601 11.398C9.50364 11.3342 9.46937 11.2653 9.44401 11.193C9.40601 11.046 9.50501 10.928 9.50501 10.928C9.50501 10.928 9.74801 10.662 9.86101 10.518C9.9551 10.3983 10.0429 10.2738 10.124 10.145C10.242 9.955 10.279 9.76 10.217 9.609C9.93701 8.925 9.64701 8.244 9.34901 7.568C9.29001 7.434 9.11501 7.338 8.95601 7.319C8.90201 7.313 8.84801 7.307 8.79401 7.303C8.65972 7.29633 8.52515 7.29866 8.39101 7.308Z"
+                                                fill="currentcolor"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-footer">
+                <div class="sub-footer-wrapper">
+                    <div>2024 W3CG Labs | All rights reserved </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxwdydkILi8zmggo78rYVnGVqh3jDn_2z6uIGLLZGjkaWLBTZlnHLIG00P8jwQkE_By/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const Success = document.getElementById('Success');
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                Success.innerHTML="Subscribed Successfully";
+
+                setTimeout(function(){
+                    Success.innerHTML="";
+                },  3000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
