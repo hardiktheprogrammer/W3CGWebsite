@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* For the newsletter part */
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxwdydkILi8zmggo78rYVnGVqh3jDn_2z6uIGLLZGjkaWLBTZlnHLIG00P8jwQkE_By/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw-gYv0fMfoZNPl4_s7Q01NtoR80Yr7RIaEl-0wmYU80DTxYnSM4qLwgJAnXxbtu6IX/exec'
         const form = document.forms['submit-to-google-sheet']
         const Success = document.getElementById('Success');
         form.addEventListener('submit', e => {
